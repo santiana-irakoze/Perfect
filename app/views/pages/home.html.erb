@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-background-1 home-container">
+
+  <%# div with title, picture and CTA %>
+  <div class="home-with-pic">
+    <div class="home-header-and-CTA">
+        <h1><span>Faites vos travaux en toute tranquilité! <br/></span> Grâce à nos partenaires de confiance</h1>
+        <% if user_signed_in? %>
+          <%= link_to "Commencer maintenant !", root_path,
+                      class: "main-cta-home" %>
+        <% else %>
+          <%= link_to "Commencer maintenant !", new_user_registration_path,
+                      class: "main-cta-home" %>
+        <% end %>
+    </div>
+  </div>
+
+</div>
